@@ -59,4 +59,5 @@ clearButton.addEventListener('click', () => {
 })
 
 //fix number + equals + number + equals bug
+//check for number length
 

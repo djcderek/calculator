@@ -3,48 +3,69 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: rgba(255, 255, 255, 0.887);
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    background-color: lightcoral;
+    background-color: #ffbad1;
     height: 300px;
     width: 175px;
-    padding: 5px;
+    padding: 7px;
     border-radius: 10px;
+    scale: 1.7;
 }
 
 .screen {
     flex: 1;
+    background-color: #eb749c;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.upper-screen {
+    font-family: 'Wix Madefor Display', sans-serif;
+    text-align: right;
+    color: white;
+}
+
+.main-screen {
+    text-align: right;
+    color: white;
+    font-family: 'Wix Madefor Display', sans-serif;
+    font-weight: 500;
+    font-size: xx-large;
 }
 
 .all-buttons {
     flex: 2 1 0;
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 7px;
 }
 
 .numpad {
     flex: 3;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 7px;
 }
 
 .operator-buttons {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 7px;
 }
 
 .row {
     flex: 1;
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 7px;
 }
 
 button {
@@ -52,6 +73,23 @@ button {
     text-decoration: none;
     border: none;
     border-radius: 10px;
+    background-color: #f8729e;/*#f4aac3; */
+    color: white;
+    transition: transform 100ms
+}
+
+button:hover {
+    translate: 0px -0.1rem;
+    scale: 1.03;
+    transition: transform 50ms
+}
+
+button.number:hover {
+    box-shadow: 0px 2px #cb5882;
+}
+
+button.operator:hover {
+    box-shadow: 0px 2px #813954;
 }
 
 #zero {
@@ -60,4 +98,14 @@ button {
 
 #equals {
     flex: 2.2;
+    background-color: #df668e;
+}
+
+button.operator {
+    background-color: #d14f7b;
+}
+
+.clear,
+.delete {
+    background-color: #b3728a;
 }
