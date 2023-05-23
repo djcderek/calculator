@@ -8,20 +8,56 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    background-color: beige;
+    background-color: lightcoral;
+    height: 300px;
+    width: 175px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.screen {
+    flex: 1;
 }
 
 .all-buttons {
+    flex: 2 1 0;
     display: flex;
     flex-direction: row;
+    gap: 5px;
+}
+
+.numpad {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .operator-buttons {
+    flex: 1;
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 .row {
+    flex: 1;
     display: flex;
     flex-direction: row;
+    gap: 5px;
+}
+
+button {
+    flex: 1;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+}
+
+#zero {
+    flex: 2.55;
+}
+
+#equals {
+    flex: 2.2;
 }

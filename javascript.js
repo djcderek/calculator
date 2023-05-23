@@ -1,31 +1,3 @@
-function add(a,b) {
-    return Number(a) + Number(b)
-}
-
-function subtract(a,b) {
-    return Number(a) - Number(b)
-}
-
-function multiply(a,b) {
-    return Number(a)*Number(b)
-}
-
-function divide(a,b) {
-    return Number(a)/Number(b)
-}
-
-function operate(numOne, numTwo, operator) {
-    if (operator === '+') {
-        return add(numOne, numTwo)
-    } else if (operator === '-') {
-        return subtract(numOne, numTwo)
-    } else if (operator === '*') {
-        return multiply(numOne, numTwo)
-    } else if (operator === '/') {
-        return divide(numOne, numTwo)
-    }
-}
-
 let display = document.querySelector('.main-screen')
 let displayValue;
 let numOne;
@@ -33,6 +5,18 @@ let numTwo;
 let operator;
 let clearState = false
 let operatorPressed = false
+
+function operate(numOne, numTwo, operator) {
+    if (operator === '+') {
+        return Number(numOne) + Number(numTwo)
+    } else if (operator === '-') {
+        return Number(numOne) - Number(numTwo)
+    } else if (operator === '*') {
+        return Number(numOne) * Number(numTwo)
+    } else if (operator === '/') {
+        return Number(numOne) / Number(numTwo)
+    }
+}
 
 let numButtons = document.querySelectorAll('.number')
 numButtons.forEach((button) => {
@@ -74,5 +58,5 @@ clearButton.addEventListener('click', () => {
     clearState = true
 })
 
-
+//fix number + equals + number + equals bug
 
