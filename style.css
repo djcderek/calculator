@@ -15,6 +15,7 @@ body {
     padding: 7px;
     border-radius: 10px;
     scale: 1.7;
+    box-shadow: 5px 5px 4px #ab5773;
 }
 
 .screen {
@@ -24,6 +25,7 @@ body {
     margin-top: 15px;
     padding: 7px;
     border-radius: 10px;
+    box-shadow: 3px 3px 3px #c36383 inset;
 }
 
 .upper-screen {
@@ -85,11 +87,21 @@ button:hover {
 }
 
 button.number:hover {
-    box-shadow: 0px 2px 1px #cb5882;
+    /* box-shadow: 1.5px 1.5px 1px #cb5882; */
 }
 
 button.operator:hover {
-    box-shadow: 0px 2px 1px #813954;
+    /* box-shadow: 1.5px 1.5px 1px #813954; */
+}
+
+button.number:active {
+    translate: 0px 0.5px;
+    box-shadow: 3px 3px 3px #c36383 inset;
+}
+
+button.operator:active {
+    translate: 0px 0.5px;
+    box-shadow: 3px 3px 3px #8e405a inset;
 }
 
 #zero {
