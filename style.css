@@ -85,11 +85,11 @@ button:hover {
 }
 
 button.number:hover {
-    box-shadow: 0px 2px #cb5882;
+    box-shadow: 0px 2px 1px #cb5882;
 }
 
 button.operator:hover {
-    box-shadow: 0px 2px #813954;
+    box-shadow: 0px 2px 1px #813954;
 }
 
 #zero {
