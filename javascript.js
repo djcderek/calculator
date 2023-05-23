@@ -5,6 +5,7 @@ let numTwo;
 let operator;
 let clearState = false
 let operatorPressed = false
+let equalityPressed = false
 
 function operate(numOne, numTwo, operator) {
     if (operator === '+') {
@@ -21,10 +22,11 @@ function operate(numOne, numTwo, operator) {
 let numButtons = document.querySelectorAll('.number')
 numButtons.forEach((button) => {
     button.addEventListener('click', () => {
-        if (operatorPressed === true || clearState === true) {
+        if (operatorPressed === true || clearState === true || equalityPressed === true) {
             display.textContent = '';
             operatorPressed = false
             clearState = false
+            equalityPressed = false
         }
         display.textContent = display.textContent + button.textContent;
         displayValue = display.textContent;
@@ -45,6 +47,8 @@ operatorButtons.forEach((button) => {
             operatorPressed = true;
         } else if (button.textContent) {
             numTwo = undefined;
+            numOne = undefined;
+            equalityPressed = true;
         }
     })
 })
