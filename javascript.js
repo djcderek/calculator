@@ -6,6 +6,7 @@ let operator;
 let clearState = false
 let operatorPressed = false
 let equalityPressed = false
+let lengthOkay = false
 
 function operate(numOne, numTwo, operator) {
     if (operator === '+') {
@@ -19,18 +20,31 @@ function operate(numOne, numTwo, operator) {
     }
 }
 
+function checkDisplay() {
+    let displayLength = display.textContent.length
+    if (displayLength >= 8 && lengthOkay === false) {
+        lengthOkay = false
+        return lengthOkay
+    } else {
+        return true
+    }
+}
+
 let numButtons = document.querySelectorAll('.number')
 numButtons.forEach((button) => {
     button.addEventListener('click', () => {
-        if (operatorPressed === true || clearState === true || equalityPressed === true) {
-            display.textContent = '';
-            operatorPressed = false
-            clearState = false
-            equalityPressed = false
+        if (checkDisplay()) {
+            if (operatorPressed === true || clearState === true || equalityPressed === true) {
+                display.textContent = '';
+                operatorPressed = false
+                clearState = false
+                equalityPressed = false
+            }
+            display.textContent = display.textContent + button.textContent;
+            displayValue = display.textContent;
+            if (numOne !== undefined) numTwo = displayValue
+            lengthOkay = false
         }
-        display.textContent = display.textContent + button.textContent;
-        displayValue = display.textContent;
-        if (numOne !== undefined) numTwo = displayValue
     })
 })
 
@@ -38,7 +52,13 @@ let operatorButtons = document.querySelectorAll('.operator')
 operatorButtons.forEach((button) => {
     button.addEventListener('click', () => {
         if (numTwo !== undefined) {
-            display.textContent = operate(numOne, numTwo, operator)
+            let number;
+            if (String(operate(numOne,numTwo, operator)).length >= 8) {
+                number = operate(numOne, numTwo, operator).toExponential(3)
+            } else  {
+                number = operate(numOne, numTwo, operator)
+            }
+            display.textContent = number
             displayValue = display.textContent
         }
         numOne = displayValue;
@@ -50,6 +70,7 @@ operatorButtons.forEach((button) => {
             numOne = undefined;
             equalityPressed = true;
         }
+        lengthOkay = true
     })
 })
 
@@ -61,7 +82,4 @@ clearButton.addEventListener('click', () => {
     numOne = undefined;
     clearState = true
 })
-
-//fix number + equals + number + equals bug
-//check for number length
 
