@@ -1,9 +1,17 @@
 :root {
+    --background: rgba(255, 255, 255, 0.887);
     --containerColor: #ffbad1;
     --screenColor: #eb749c;
     --buttonColor: #f8729e;
     --operatorColor: #d14f7b;
-    --testColor: #59baff;
+    --equalsColor: #df668e;
+    --delColor: #b3728a;
+    --containerShadow: #ab5773;
+    --screenShadow: #c36383;
+    --buttonShadow: #cb5882;
+    --operatorShadow: #813954;
+    --operatorShadowPressed: #8e405a;
+    --testColor: #0a5486;
 }
 
 .slider {
@@ -31,7 +39,7 @@ body {
     align-items: center;
     gap: 50px;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.887);
+    background-color: var(--background);
 }
 
 .container {
@@ -43,7 +51,7 @@ body {
     padding: 7px;
     border-radius: 10px;
     scale: 1.7;
-    box-shadow: 5px 5px 4px #ab5773;
+    box-shadow: 5px 5px 4px var(--containerShadow); /* #ab5773 */
 }
 
 .screen {
@@ -53,7 +61,7 @@ body {
     margin-top: 15px;
     padding: 7px;
     border-radius: 10px;
-    box-shadow: 3px 3px 3px #c36383 inset;
+    box-shadow: 3px 3px 3px var(--screenShadow) inset; /* #c36383 */
 }
 
 .upper-screen {
@@ -117,23 +125,23 @@ button:hover {
 }
 
 button.number:hover {
-    box-shadow: 1.5px 1.5px 1px #cb5882;
+    box-shadow: 1.5px 1.5px 1px var(--buttonShadow); /* #cb5882 */
 }
 
 button.operator:hover {
-    box-shadow: 1.5px 1.5px 1px #813954;
+    box-shadow: 1.5px 1.5px 1px var(--operatorShadow); /* #813954 */
     background-color: #fdebf1;
     color: var(--operatorColor); /* #d14f7b */
 }
 
 button.number:active {
     translate: 0px 0.5px;
-    box-shadow: 3px 3px 3px #c36383 inset;
+    box-shadow: 3px 3px 3px var(--screenShadow) inset; /* #c36383 */
 }
 
 button.operator:active {
     translate: 0px 0.5px;
-    box-shadow: 3px 3px 3px #8e405a inset;
+    box-shadow: 3px 3px 3px var(--operatorShadowPressed) inset; /* #8e405a */
 }
 
 #zero {
@@ -142,7 +150,7 @@ button.operator:active {
 
 #equals {
     flex: 2.2;
-    background-color: #df668e;
+    background-color: var(--equalsColor); /* #df668e */
 }
 
 button.operator {
@@ -151,5 +159,5 @@ button.operator {
 
 .clear,
 .delete {
-    background-color: #b3728a;
+    background-color: var(--delColor); /* #b3728a */
 }

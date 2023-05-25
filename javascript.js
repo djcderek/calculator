@@ -101,16 +101,31 @@ let slider = document.querySelector('.slider')
 toggleButton.addEventListener('click', () => {
     slider.classList.toggle('shiftY')
     if (slider.classList[1] === 'shiftY') {
-        document.documentElement.style.setProperty('--containerColor', '#163346');
-        document.documentElement.style.setProperty('--screenColor', '#005db2');
+        document.documentElement.style.setProperty('--containerColor', '#0a5486'); //#163346
+        document.documentElement.style.setProperty('--screenColor', '#118ee8'); //#005db2
         document.documentElement.style.setProperty('--buttonColor', '#1281d1');
         document.documentElement.style.setProperty('--operatorColor', '#59baff');
-
+        document.documentElement.style.setProperty('--equalsColor', '#20a2ff');
+        document.documentElement.style.setProperty('--delColor', '#87a7be');
+        document.documentElement.style.setProperty('--containerShadow', '#163346'); 
+        document.documentElement.style.setProperty('--screenShadow', '#114569'); 
+        document.documentElement.style.setProperty('--buttonShadow', '#114569'); 
+        document.documentElement.style.setProperty('--operatorShadow', '#114569'); 
+        document.documentElement.style.setProperty('--operatorShadowPressed', '#114569');
+        document.documentElement.style.setProperty('--background', '#2d4555');
     } else {
         document.documentElement.style.setProperty('--containerColor', '#ffbad1');
         document.documentElement.style.setProperty('--screenColor', '#eb749c');
         document.documentElement.style.setProperty('--buttonColor', '#f8729e');
         document.documentElement.style.setProperty('--operatorColor', '#d14f7b');
+        document.documentElement.style.setProperty('--equalsColor', '#df668e');
+        document.documentElement.style.setProperty('--delColor', '#b3728a'); 
+        document.documentElement.style.setProperty('--containerShadow', '#ab5773');
+        document.documentElement.style.setProperty('--screenShadow', '#c36383'); 
+        document.documentElement.style.setProperty('--buttonShadow', '#cb5882'); 
+        document.documentElement.style.setProperty('--operatorShadow', '#813954'); 
+        document.documentElement.style.setProperty('--operatorShadowPressed', '#8e405a');
+        document.documentElement.style.setProperty('--background', 'rgba(255, 255, 255, 0.887)');
     }
 })
 
