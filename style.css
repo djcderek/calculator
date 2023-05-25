@@ -81,17 +81,21 @@ button {
 }
 
 button:hover {
+    background-color: #fdebf1;
+    color: #f8729e;
     translate: 0px -0.1rem;
     scale: 1.03;
-    transition: transform 50ms
+    transition: transform 50ms;
 }
 
 button.number:hover {
-    /* box-shadow: 1.5px 1.5px 1px #cb5882; */
+    box-shadow: 1.5px 1.5px 1px #cb5882;
 }
 
 button.operator:hover {
-    /* box-shadow: 1.5px 1.5px 1px #813954; */
+    box-shadow: 1.5px 1.5px 1px #813954;
+    background-color: #fdebf1;
+    color: #d14f7b;
 }
 
 button.number:active {
