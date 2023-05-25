@@ -83,3 +83,15 @@ clearButton.addEventListener('click', () => {
     clearState = true
 })
 
+let delButton = document.querySelector('.delete')
+delButton.addEventListener('click', () => {
+    if (display.textContent.length > 1) {
+        display.textContent = display.textContent.substring(0, display.textContent.length-1)
+        displayValue = display.textContent
+        //numTwo = display.textContent
+    } else {
+        display.textContent = 0
+        displayValue = display.textContent
+        //numTwo = 0
+    }
+})
