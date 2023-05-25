@@ -7,6 +7,7 @@ let clearState = false
 let operatorPressed = false
 let equalityPressed = false
 let lengthOkay = false
+let decPressed = false
 
 function operate(numOne, numTwo, operator) {
     if (operator === '+') {
@@ -71,6 +72,7 @@ operatorButtons.forEach((button) => {
             equalityPressed = true;
         }
         lengthOkay = true
+        decPressed = false
     })
 })
 
@@ -80,7 +82,8 @@ clearButton.addEventListener('click', () => {
     displayValue = display.textContent;
     numTwo = undefined;
     numOne = undefined;
-    clearState = true
+    clearState = true;
+    decPressed = false;
 })
 
 let delButton = document.querySelector('.delete')
@@ -93,6 +96,17 @@ delButton.addEventListener('click', () => {
         display.textContent = 0
         displayValue = display.textContent
         //numTwo = 0
+    }
+    if (!display.textContent.includes('.')) {
+        decPressed = false
+    }
+})
+
+let decButton = document.querySelector('.decimal')
+decButton.addEventListener('click', () => {
+    if (!decPressed) {
+        display.textContent = display.textContent + '.';
+        decPressed = true
     }
 })
 
