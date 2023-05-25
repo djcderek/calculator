@@ -95,3 +95,22 @@ delButton.addEventListener('click', () => {
         //numTwo = 0
     }
 })
+
+let toggleButton = document.querySelector('.toggle')
+let slider = document.querySelector('.slider')
+toggleButton.addEventListener('click', () => {
+    slider.classList.toggle('shiftY')
+    if (slider.classList[1] === 'shiftY') {
+        document.documentElement.style.setProperty('--containerColor', '#163346');
+        document.documentElement.style.setProperty('--screenColor', '#005db2');
+        document.documentElement.style.setProperty('--buttonColor', '#1281d1');
+        document.documentElement.style.setProperty('--operatorColor', '#59baff');
+
+    } else {
+        document.documentElement.style.setProperty('--containerColor', '#ffbad1');
+        document.documentElement.style.setProperty('--screenColor', '#eb749c');
+        document.documentElement.style.setProperty('--buttonColor', '#f8729e');
+        document.documentElement.style.setProperty('--operatorColor', '#d14f7b');
+    }
+})
+

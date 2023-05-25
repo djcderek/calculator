@@ -1,7 +1,35 @@
+:root {
+    --containerColor: #ffbad1;
+    --screenColor: #eb749c;
+    --buttonColor: #f8729e;
+    --operatorColor: #d14f7b;
+    --testColor: #59baff;
+}
+
+.slider {
+    display: flex;
+    width: 44px;
+    height: 88px;
+    background-color: #7d7d7d;
+    border-radius: 22px;
+}
+
+.toggle {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.782);
+    border-radius: 22px;
+}
+
+.shiftY {
+    align-items: flex-end;
+}
+
 body {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    gap: 50px;
     height: 100vh;
     background-color: rgba(255, 255, 255, 0.887);
 }
@@ -9,7 +37,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    background-color: #ffbad1;
+    background-color: var(--containerColor); /* #ffbad1 */
     height: 300px;
     width: 175px;
     padding: 7px;
@@ -20,7 +48,7 @@ body {
 
 .screen {
     flex: 1;
-    background-color: #eb749c;
+    background-color: var(--screenColor); /* #eb749c */
     margin-bottom: 20px;
     margin-top: 15px;
     padding: 7px;
@@ -75,14 +103,14 @@ button {
     text-decoration: none;
     border: none;
     border-radius: 10px;
-    background-color: #f8729e;/*#f4aac3; */
+    background-color: var(--buttonColor);/*#f8729e #f4aac3; */
     color: white;
     transition: transform 100ms
 }
 
 button:hover {
     background-color: #fdebf1;
-    color: #f8729e;
+    color: var(--buttonColor);
     translate: 0px -0.1rem;
     scale: 1.03;
     transition: transform 50ms;
@@ -95,7 +123,7 @@ button.number:hover {
 button.operator:hover {
     box-shadow: 1.5px 1.5px 1px #813954;
     background-color: #fdebf1;
-    color: #d14f7b;
+    color: var(--operatorColor); /* #d14f7b */
 }
 
 button.number:active {
@@ -118,7 +146,7 @@ button.operator:active {
 }
 
 button.operator {
-    background-color: #d14f7b;
+    background-color: var(--operatorColor); /* #d14f7b */
 }
 
 .clear,
